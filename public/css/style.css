@@ -63,8 +63,12 @@ section h1 {
   font-size: 42px;
   font-family: "Bungee Spice";
 }
-
+.col-6.paragraphe {
+  margin-top: 30px;
+}
 section p {
+  text-align: right;
+  direction: rtl;
   overflow: hidden;
   position: relative;
   line-height: 1.2em;
@@ -76,25 +80,32 @@ section p {
 section p:before {
   content: "...";
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
 }
 section p:after {
   content: "";
+  direction: rtl;
   position: absolute;
   right: 0;
   width: 1em;
   height: 1em;
   margin-top: 0.2em;
-  background: white;
 }
+
 section:nth-child(odd) {
   background-color: rgb(213, 248, 236);
+}
+
+section:nth-child(odd) .content {
   flex-direction: row;
 }
 
 section:nth-child(even) {
   background-color: rgb(138, 159, 229);
+}
+
+section:nth-child(even) .content {
   flex-direction: row-reverse;
 }
 
